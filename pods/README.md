@@ -16,3 +16,6 @@ NAME        READY   STATUS    RESTARTS   AGE
 nginx-pod   1/1     Running   0          3m4s 
 
 > we can only run container but don't exposes outside unless expose service .
+
+Optional : 
+you can build docker image and replace image name in k8 manifest .

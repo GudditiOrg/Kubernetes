@@ -12,7 +12,7 @@ https://kubernetes.io/docs/concepts/workloads/pods/
 <li> `kubectl apply -f pod.yml`
 <li> `kubectl get pods -w `
 > Output:
-`NAME        READY   STATUS    RESTARTS   AGE 
-nginx-pod   1/1     Running   0          3m4s` 
+NAME        READY   STATUS    RESTARTS   AGE 
+nginx-pod   1/1     Running   0          3m4s 
 
->> we can only run container but don't exposes outside unless expose service .
+> we can only run container but don't exposes outside unless expose service .

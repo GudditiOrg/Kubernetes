@@ -10,15 +10,15 @@ https://kubernetes.io/docs/concepts/workloads/pods/
 <li> clone this repo 
 <li> `cd pods`
 <li> `kubectl apply -f pod.yml`
-<li> `kubectl get pods -w `
-> Output: <br>
-```
+<li> `kubectl get pods -w ` <br>
+
+### Output : 
+```yaml
 NAME        READY   STATUS    RESTARTS   AGE
 nginx-pod   1/1     Running   0          3m4s
 ```
 
+### we can only run container but don't exposes outside unless expose service .
 
-> we can only run container but don't exposes outside unless expose service .
-
-Optional : 
+### Optional : 
 you can build docker image and replace image name in k8 manifest .

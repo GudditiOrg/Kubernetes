@@ -1,6 +1,6 @@
 # Kubernetes 
  Kubernetes is an open-source container orchestration platform used for automating the deployment, scaling, and management of containerized applications. 
-## ifference between docker and kubernetes
+## Difference between docker and kubernetes
 
 <img src="https://www.atatus.com/blog/content/images/2022/11/Automated-scheduling-and-management-of-application-containers--3-.png" alt="Difference between docker and kubernetes">
 

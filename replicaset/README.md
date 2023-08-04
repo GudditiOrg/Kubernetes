@@ -7,10 +7,10 @@
 https://kubernetes.io/docs/concepts/workloads/controllers/replicaset/
 
 ## To run code 
-<li> clone this repo 
-<li> `cd replicaset `
-<li> `kubectl apply -f replicaset.yml`
-<li> `kubectl get rs -w ` <br>
+1. clone this repo 
+2. cd replicaset 
+3. kubectl apply -f replicaset.yml
+4. kubectl get rs -w  <br>
 
 > The restartPolicy field is used in the context of pods, not ReplicaSets.
 ### Output : 
@@ -19,8 +19,8 @@ NAME       DESIRED   CURRENT   READY   AGE
 nginx-rs   3         3         3       11s
 
 ```
-<li> `kubectl get rs nginx-rs -o yaml`
-<li> ` kubectl delete -f replicaset.yml`
+5. kubectl get rs nginx-rs -o yaml
+6. kubectl delete -f replicaset.yml
 ### we can only run container but don't exposes outside unless expose service .
 
 ### Optional : 

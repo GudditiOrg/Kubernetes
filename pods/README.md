@@ -7,17 +7,17 @@
 https://kubernetes.io/docs/concepts/workloads/pods/
 
 ## To run code 
-<li> clone this repo 
-<li> `cd pods`
-<li> `kubectl apply -f pod.yml`
-<li> `kubectl get pods -w ` <br>
+1. clone this repo 
+2. cd pods
+3. kubectl apply -f pod.yml
+4. kubectl get pods -w  <br>
 
 ### Output : 
 ```yaml
 NAME        READY   STATUS    RESTARTS   AGE
 nginx-pod   1/1     Running   0          3m4s
 ```
-
+5. kubectl delete -f pod.yml
 ### we can only run container but don't exposes outside unless expose service .
 
 ### Optional : 

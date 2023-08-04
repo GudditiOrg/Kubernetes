@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: nginx-rs
+  labels:
+    app: nginx-rs
+
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: nginx-rs
+  
+  template:
+    metadata:
+      name: nginx-rs
+      labels:
+        app: nginx-rs
+    spec:
+      containers:
+        - name: nginx-rs
+          image: gudditi/nginx-pod
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 80
+
+

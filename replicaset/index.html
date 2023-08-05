@@ -1,84 +1,101 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Webpage</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
-            background-color: #f2f2f2;
-        }
-        header {
-            background-color: #333;
-            color: #fff;
-            padding: 1rem;
-            text-align: center;
-        }
-        nav {
-            background-color: #444;
-            padding: 0.5rem;
-        }
-        nav ul {
-            list-style: none;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-        }
-        nav ul li {
-            margin: 0 1rem;
-        }
-        nav ul li a {
-            color: #fff;
-            text-decoration: none;
-        }
-        main {
-            padding: 1rem;
-        }
-        footer {
-            background-color: #333;
-            color: #fff;
-            text-align: center;
-            padding: 1rem;
-        }
-    </style>
+  <title>Registration and Login Form</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background-image: url("https://newevolutiondesigns.com/images/wallpapers/4k-car-wallpaper-6.jpg");
+      background-size: cover;
+    }
+
+    .form-container {
+      display: flex;
+      width: 800px;
+      background-color: rgba(255, 255, 255, 0.8);
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      border-radius: 10px;
+    }
+
+    .form-column {
+      flex: 1;
+      padding: 20px;
+    }
+
+    .form-column:first-child {
+      padding-right: 40px;
+    }
+
+    .form-column:last-child {
+      padding-left: 40px; /* Add additional space to the right of the login form fields */
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="password"] {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    input[type="submit"] {
+      width: 100%;
+      padding: 10px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #45a049;
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <h1>Welcome to My Webpage</h1>
-    </header>
-
-    <nav>
-        <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
-
-    <main>
-        <section id="home">
-            <h2>Home Section</h2>
-            <p>This is the home section of my webpage.</p>
-        </section>
-
-        <section id="about">
-            <h2>About Section</h2>
-            <p>This is the about section of my webpage.</p>
-        </section>
-
-        <section id="contact">
-            <h2>Contact Section</h2>
-            <p>This is the contact section of my webpage.</p>
-        </section>
-    </main>
-
-    <footer>
-        <p>&copy; 2023 My Webpage. All rights reserved.</p>
-    </footer>
+  <div class="form-container">
+    <div class="form-column">
+      <h1>Registration Form</h1>
+      <form action="/register" method="post">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        <label for="country">Country:</label>
+        <input type="text" id="country" name="country" required>
+        <label for="passcode">Passcode:</label>
+        <input type="password" id="passcode" name="passcode" required>
+        <input type="submit" value="Register">
+      </form>
+    </div>
+    <div class="form-column">
+      <h1>Login Form</h1>
+      <form action="/login" method="post">
+        <label for="loginEmail">Email:</label>
+        <input type="email" id="loginEmail" name="loginEmail" required>
+        <label for="loginPasscode">Passcode:</label>
+        <input type="password" id="loginPasscode" name="loginPasscode" required>
+        <input type="submit" value="Login">
+      </form>
+    </div>
+  </div>
 </body>
 </html>

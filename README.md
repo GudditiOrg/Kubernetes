@@ -5,3 +5,5 @@
 - [Introduction about Kubernetes](https://gudditiorg.github.io/Kubernetes/introduction)
 - [Introduction about Pods](https://github.com/GudditiOrg/Kubernetes/tree/main/pods)
 - [Introduction about ReplicaSet](https://github.com/GudditiOrg/Kubernetes/tree/main/replicaset)
+- [Introduction about Deployments](https://github.com/GudditiOrg/Kubernetes/blob/main/deployments)
+

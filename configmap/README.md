@@ -16,20 +16,21 @@ https://kubernetes.io/docs/concepts/configuration/configmap/#:~:text=A%20ConfigM
 > The restartPolicy field is used in the context of pods, not ReplicaSets.
 ### Output : 
 ```yaml
-NAME                               READY   STATUS    RESTARTS   AGE
-pod/nginx-deploy-c6bd88887-gjnvg   1/1     Running   0          3m25s
-pod/nginx-deploy-c6bd88887-mxbch   1/1     Running   0          3m25s
-pod/nginx-deploy-c6bd88887-vff9v   1/1     Running   0          3m25s
+$ kubectl get all -n node
+NAME                            READY   STATUS    RESTARTS        AGE
+pod/node-app-655589b65c-5x8v6   1/1     Running   4 (6m47s ago)   7m54s
+pod/node-app-655589b65c-fwwhm   1/1     Running   4 (6m53s ago)   7m54s
 
-NAME                    TYPE        CLUSTER-IP      EXTERNAL-IP   PORT(S)        AGE
-service/kubernetes      ClusterIP   10.96.0.1       <none>        443/TCP        13d
-service/nginx-service   NodePort    10.99.152.108   <none>        80:32249/TCP   49s
+NAME               TYPE       CLUSTER-IP      EXTERNAL-IP   PORT(S)          AGE
+service/node-svc   NodePort   10.110.163.68   <none>        3000:31143/TCP   7m54s
 
-NAME                           READY   UP-TO-DATE   AVAILABLE   AGE
-deployment.apps/nginx-deploy   3/3     3            3           3m25s
+NAME                       READY   UP-TO-DATE   AVAILABLE   AGE
+deployment.apps/node-app   2/2     2            2           7m54s
 
-NAME                                     DESIRED   CURRENT   READY   AGE
-replicaset.apps/nginx-deploy-c6bd88887   3         3         3       3m25s
+NAME                                  DESIRED   CURRENT   READY   AGE
+replicaset.apps/node-app-655589b65c   2         2         2       7m54s
+
+
 ```
 5. kubectl get deploy nginx-deploy -o yaml
 6. kubectl delete -f .

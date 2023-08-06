@@ -4,6 +4,8 @@
 
 - [Introduction about Kubernetes](https://gudditiorg.github.io/Kubernetes/introduction)
 - [Introduction about Pods](https://github.com/GudditiOrg/Kubernetes/tree/main/pods)
+  - [Pod To Pod Communication](https://github.com/GudditiOrg/Kubernetes/tree/main/PodToPod-Communication) 
 - [Introduction about ReplicaSet](https://github.com/GudditiOrg/Kubernetes/tree/main/replicaset)
 - [Introduction about Deployments](https://github.com/GudditiOrg/Kubernetes/blob/main/deployments)
+- [Introduction to ConfigMap](https://github.com/GudditiOrg/Kubernetes/tree/main/configmap)
 

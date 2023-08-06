@@ -8,4 +8,5 @@
 - [Introduction about ReplicaSet](https://github.com/GudditiOrg/Kubernetes/tree/main/replicaset)
 - [Introduction about Deployments](https://github.com/GudditiOrg/Kubernetes/blob/main/deployments)
 - [Introduction to ConfigMap](https://github.com/GudditiOrg/Kubernetes/tree/main/configmap)
+- [Introduction to Secrets](https://github.com/GudditiOrg/Kubernetes/tree/main/secrets)
 

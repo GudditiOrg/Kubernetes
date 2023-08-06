@@ -36,6 +36,9 @@ replicaset.apps/node-app-768d9676f4   2         2         2       10s
 ### we can only run container but don't exposes outside unless expose service .
 
 ### Optional : 
-you can build docker image and replace image name in k8 manifest .
+you can build docker image and replace image name in k8 manifest .<br>
+## The output of code :  
+after deployment browse from here : [http://localhost:31143/](http://localhost:31143/) or [http://ip:31143/](http://ip:31143/)
+![image](https://github.com/GudditiOrg/Kubernetes/assets/87116202/37b4ab58-4a82-48b0-88d9-05e17a6b6d7c)
 
 

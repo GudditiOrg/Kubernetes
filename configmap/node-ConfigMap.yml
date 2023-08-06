@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: ConfigMap 
+metadata:
+  name: node-config-map
+data:
+  MONGODB_URL: "bW9uZ29kYitzcnY6Ly90ZXN0OnRlc3RAbW9uZ28uMHl2anloMC5tb25nb2RiLm5ldC8K"
+  
+  # decode base64 

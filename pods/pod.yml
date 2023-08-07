@@ -10,7 +10,6 @@ spec:
     - name: nginx-pod
       image: gudditi/nginx-pod
       imagePullPolicy: IfNotPresent
-      restartPolicy: OnFailure
       ports:
         - containerPort: 80
 

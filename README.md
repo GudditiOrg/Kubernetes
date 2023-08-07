@@ -18,7 +18,7 @@
 
 https://istio.io/latest/docs/setup/getting-started/#download
 
-<li> Go to the Istio [release](https://github.com/istio/istio/releases/), page to download the installation file for your OS, or download and extract the latest release automatically (Linux or macOS):
+<li> Go to the Istio release https://github.com/istio/istio/releases/, page to download the installation file for your OS, or download and extract the latest release automatically (Linux or macOS):
 <li> Move to the Istio package directory. For example, if the package is istio-1.18.2:<br>
 
 `cd istio-1.18.2 `
@@ -26,7 +26,7 @@ https://istio.io/latest/docs/setup/getting-started/#download
 
 `export PATH=$PWD/bin:$PATH`
 # Install Istio
-<li> For this installation, we use the demo configuration [profile](https://istio.io/latest/docs/setup/additional-setup/config-profiles/). It’s selected to have a good set of defaults for testing, but there are other profiles for production or performance testing.<br>
+<li> For this installation, we use the demo configuration profilehttps://istio.io/latest/docs/setup/additional-setup/config-profiles/. It’s selected to have a good set of defaults for testing, but there are other profiles for production or performance testing.<br>
 
 `istioctl install --set profile=demo -y`
 <li> Add a namespace label to instruct Istio to automatically inject Envoy sidecar proxies when you deploy your application later:<br>

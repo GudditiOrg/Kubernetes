@@ -18,7 +18,7 @@
 
 https://istio.io/latest/docs/setup/getting-started/#download
 
-<li> Go to the Istio [release](https://github.com/istio/istio/releases/) page to download the installation file for your OS, or download and extract the latest release automatically (Linux or macOS):
+<li> Go to the Istio [release](https://github.com/istio/istio/releases/), page to download the installation file for your OS, or download and extract the latest release automatically (Linux or macOS):
 <li> Move to the Istio package directory. For example, if the package is istio-1.18.2:<br>
 
 `cd istio-1.18.2 `

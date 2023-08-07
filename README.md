@@ -14,7 +14,7 @@
 
 
 
-## Istio Installation: 
+# Istio Installation: 
 
 https://istio.io/latest/docs/setup/getting-started/#download
 
@@ -25,7 +25,7 @@ https://istio.io/latest/docs/setup/getting-started/#download
 <li> Add the istioctl client to your path (Linux or macOS): and set env in Windows using env <br>
 
 `export PATH=$PWD/bin:$PATH`
-# Install Istio
+## Install Istio
 <li> For this installation, we use the demo configuration profilehttps://istio.io/latest/docs/setup/additional-setup/config-profiles/. It’s selected to have a good set of defaults for testing, but there are other profiles for production or performance testing.<br>
 
 `istioctl install --set profile=demo -y`

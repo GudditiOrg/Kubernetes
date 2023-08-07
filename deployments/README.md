@@ -23,6 +23,15 @@ nginx-deploy   3/3     3            3           24s
 6. kubectl delete -f deployments.yml
 ### we can only run container but don't exposes outside unless expose service .
 
+### Deployment lifecycle 
+```YAML
+kubectl rollout history deploy/nginx-deploy
+deployment.apps/nginx-deploy 
+REVISION  CHANGE-CAUSE       
+1         <none>
+2         <none>
+3         <none>
+```
 ### Optional : 
 you can build docker image and replace image name in k8 manifest .
 

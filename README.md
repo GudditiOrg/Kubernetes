@@ -16,6 +16,8 @@
 
 # Istio Installation: 
 
+### what is Istio:
+Istio, an open-source service mesh, integrates into existing distributed applications, offering uniform security, connectivity, and monitoring. It enables load balancing, secure communication, and traffic control without extensive coding. Its control plane provides features like encryption, routing rules, and metrics, making Istio versatile and capable of complex deployments. Istio runs on Kubernetes and has a diverse ecosystem of contributors and integrations. You can install Istio or use vendor products for management. 
 https://istio.io/latest/docs/setup/getting-started/#download
 
 <li> Go to the Istio release https://github.com/istio/istio/releases/, page to download the installation file for your OS, or download and extract the latest release automatically (Linux or macOS):

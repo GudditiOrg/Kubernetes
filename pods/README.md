@@ -22,3 +22,14 @@ nginx-pod   1/1     Running   0          3m4s
 
 ### Optional : 
 you can build docker image and replace image name in k8 manifest .
+# Port-forward
+Use Port Forwarding to Access Applications in a Cluster
+`$ kubectl port-forward nginx-pod 8080:80`
+```YAML
+Forwarding from 127.0.0.1:8080 -> 80
+Forwarding from [::1]:8080 -> 80
+Handling connection for 8080
+Handling connection for 8080
+Handling connection for 8080
+```
+

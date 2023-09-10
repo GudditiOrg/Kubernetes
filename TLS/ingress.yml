@@ -1,0 +1,20 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: my-ingress
+spec:
+  tls:
+    - hosts:
+      - test-gudditi.com
+      secretName: my-tls-secret
+  rules:
+    - host: test-gudditi.com
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: node-svc
+                port:
+                  number: 3000 # The NodePort service port

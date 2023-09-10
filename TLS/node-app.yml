@@ -1,8 +1,8 @@
 apiVersion: apps/v1
-kind: Deployment 
+kind: Deployment
 metadata:
   name: node-app
-  labels: 
+  labels:
     name: node-app
     app: node-app
 spec:
@@ -13,7 +13,7 @@ spec:
   template:
     metadata:
       name: node-app
-      labels: 
+      labels:
         app: node-app
     spec:
       containers:
@@ -24,5 +24,10 @@ spec:
           envFrom:
             - secretRef:
                 name: node-app-secret
-
-
+          resources:
+            requests:
+              cpu: "60m"   # Note: "m" is lowercase for milliCPU (100m instead of 100M)
+              memory: "60Mi"
+            limits:
+              cpu: "100m"   # Note: "m" is lowercase for milliCPU (250m instead of 250M)
+              memory: "100Mi"

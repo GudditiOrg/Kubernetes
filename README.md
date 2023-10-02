@@ -112,9 +112,11 @@ istioctl dashboard prometheus &
 # argo-cd
 <li> official documentation : https://argo-cd.readthedocs.io/en/stable/
 ### Installation:
-```YAML
-Add repository
-helm repo add argo https://argoproj.github.io/argo-helm
-Install chart
-helm install my-argo-cd argo/argo-cd --version 5.46.7
+
+```Bash
+    Add repository
+    helm repo add argo https://argoproj.github.io/argo-helm
+    Install chart
+    helm install my-argo-cd argo/argo-cd --version 5.46.7
+
 ```

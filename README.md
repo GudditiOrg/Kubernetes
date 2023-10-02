@@ -113,11 +113,8 @@ istioctl dashboard prometheus &
 <li> official documentation : https://argo-cd.readthedocs.io/en/stable/
 ### Installation:
 ```YAML
-guddi@Gudditi MINGW64 ~/OneDrive/Desktop/Preprations/Bookstore-APP (main)
 $ helm repo add argo https://argoproj.github.io/argo-helm
 "argo" already exists with the same configuration, skipping
-
-guddi@Gudditi MINGW64 ~/OneDrive/Desktop/Preprations/Bookstore-APP (main)
 $ helm install my-argo-cd argo/argo-cd --version 5.46.7
 
 

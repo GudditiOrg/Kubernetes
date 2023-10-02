@@ -114,9 +114,12 @@ istioctl dashboard prometheus &
 ### Installation:
 
 ```Bash
-    Add repository
+    #Add repository
     helm repo add argo https://argoproj.github.io/argo-helm
-    Install chart
+    #Install chart
     helm install my-argo-cd argo/argo-cd --version 5.46.7
-
+    #port-forward
+    kubectl port-forward service/my-argo-cd-argocd-server -n default 8080:443
+    #passcode
+    kubectl -n default get secret argocd-initial-admin-secret -o jsonpath="{.data.password}" | base64 -d
 ```

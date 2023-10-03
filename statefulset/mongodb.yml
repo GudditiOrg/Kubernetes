@@ -1,5 +1,5 @@
 apiVersion: apps/v1
-kind: Deployment
+kind: Statefulset
 metadata:
   name: mongodb
   labels:
@@ -15,23 +15,16 @@ spec:
         app: mongodb
     spec:
       containers:
-        - image: mongo
+        - image: bitnami/mongodb:latest
           imagePullPolicy: IfNotPresent
           name: mongodb
           ports:
             - containerPort: 27017
           env:
             - name: MONGO_INITDB_ROOT_USERNAME
-              valueFrom:
-                secretKeyRef:
-                  name: mysecret
-                  key: USERNAME
+              value: admin
             - name: MONGO_INITDB_ROOT_PASSWORD
-              valueFrom:
-                secretKeyRef:
-                  name: mysecret
-                  key: PASSWORD
-
+              value: admin
 
 ---
 
@@ -46,5 +39,5 @@ spec:
     - protocol: TCP
       port: 27017
       targetPort: 27017
+      
 
-  type: ClusterIP

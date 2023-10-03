@@ -1,13 +1,12 @@
-# Requests and limits 
+# StatefulSets
 
-<b>If the node where a Pod is running has enough of a resource available, it's possible (and allowed) for a container to use more resource than its request for that resource specifies. However, a container is not allowed to use more than its resource limit.
+<b>Manages the deployment and scaling of a set of Pods, and provides guarantees about the ordering and uniqueness of these Pods.
 
 </b>
 > For example, if you set a memory request of 256 MiB for a container, and that container is in a Pod scheduled to a Node with 8GiB of memory and no other Pods, then the container can try to use more RAM. 
 
-<img src="https://blog.kubecost.com/assets/images/k8s-recs-ands-limits.png" alt="Requests and limits">
-
-https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/#requests-and-limits
+<img src="https://cloud.google.com/static/kubernetes-engine/images/statefulset.png" alt="STS">
+https://kubernetes.io/docs/concepts/workloads/controllers/statefulset/
 
 
 ## To run code 

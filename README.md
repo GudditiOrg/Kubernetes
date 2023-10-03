@@ -106,4 +106,20 @@ istioctl dashboard kiali &
 istioctl dashboard grafana &
 istioctl dashboard jaeger &
 istioctl dashboard prometheus &
+
+```
+
+# argo-cd
+<li> official documentation : https://argo-cd.readthedocs.io/en/stable/
+### Installation:
+
+```Bash
+    #Add repository
+    helm repo add argo https://argoproj.github.io/argo-helm
+    #Install chart
+    helm install my-argo-cd argo/argo-cd --version 5.46.7
+    #port-forward
+    kubectl port-forward service/my-argo-cd-argocd-server -n default 8080:443
+    #passcode
+    kubectl -n default get secret argocd-initial-admin-secret -o jsonpath="{.data.password}" | base64 -d
 ```

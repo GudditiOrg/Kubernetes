@@ -10,8 +10,16 @@ spec:
     - ReadWriteOnce
   persistentVolumeReclaimPolicy: Recycle
   storageClassName: slow
-  hostPath:
-    path: .
+  local:
+    path: /c/Users/guddi/OneDrive/Desktop/mongopvc
+  nodeAffinity:
+    required:
+      nodeSelectorTerms:
+      - matchExpressions:
+        - key: kubernetes.io/hostname
+          operator: In
+          values:
+          - docker-desktop
 
 ---
 

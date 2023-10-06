@@ -5,7 +5,7 @@ metadata:
   labels:
     app: mongodb
 spec:
-  replicas: 2
+  replicas: 1
   selector:
     matchLabels:
       app: mongodb
@@ -26,10 +26,14 @@ spec:
               value: admin
             - name: MONGO_INITDB_ROOT_PASSWORD
               value: admin
+          volumeMounts:
+            - mountPath: "/data/db"
+              name: mypv
       volumes:
-        - name: mongodb-storage
-          persistentVolumeClaim:
-            claimName: mypvclaim  
+        - name: mypv
+          host:
+            path: /data
+
 
 ---
 
@@ -102,3 +106,4 @@ spec:
     - protocol: TCP
       port: 8081
       targetPort: 8081
+      nodePort: 32504

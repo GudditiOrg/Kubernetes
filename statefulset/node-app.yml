@@ -20,7 +20,7 @@ spec:
       initContainers:
         - name: wait-for-mongodb
           image: busybox
-          command: ['sh', '-c', 'until nslookup mongodb.sts-app.svc.cluster.local; do echo waiting for mongodb; sleep 2; done;']
+          command: ['sh', '-c', 'until nslookup mongodb-svc.sts-app.svc.cluster.local; do echo waiting for mongodb; sleep 2; done;']
       containers:
         - name: node-app
           image: gudditi/node-app

@@ -65,7 +65,7 @@ spec:
       initContainers:
         - name: wait-for-mongodb
           image: busybox
-          command: ['sh', '-c', 'until nslookup mongodb-svc.default.svc.cluster.local; do echo waiting for mongodb; sleep 2; done;']
+          command: ['sh', '-c', 'until nslookup mongodb.default.svc.cluster.local; do echo waiting for mongodb; sleep 2; done;']
      
       containers:
         - image: mongo-express

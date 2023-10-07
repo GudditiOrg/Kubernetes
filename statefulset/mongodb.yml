@@ -2,6 +2,7 @@ apiVersion: apps/v1
 kind: StatefulSet
 metadata:
   name: mongodb
+  namespace: sts-app
   labels:
     app: mongodb
 spec:
@@ -26,13 +27,7 @@ spec:
               value: admin
             - name: MONGO_INITDB_ROOT_PASSWORD
               value: admin
-          volumeMounts:
-            - mountPath: "/data/db"
-              name: mypv
-      volumes:
-        - name: mypv
-          host:
-            path: /data
+
 
 
 ---
@@ -41,6 +36,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: mongodb-svc
+  namespace: sts-app
 spec:
   selector:
     app: mongodb
@@ -55,6 +51,7 @@ apiVersion: apps/v1
 kind: StatefulSet
 metadata:
   name: mongoexpress
+  namespace: sts-app
 spec:
   replicas: 1
   selector:
@@ -98,6 +95,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: mongoexpress-svc
+  namespace: sts-app
 spec:
   type: NodePort
   selector:

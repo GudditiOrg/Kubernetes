@@ -1,37 +1,38 @@
-apiVersion: v1
-kind: PersistentVolume
-metadata:
-  name: mypv
-spec:
-  capacity:
-    storage: 1Gi
-  volumeMode: Filesystem
-  accessModes:
-    - ReadWriteOnce
-  persistentVolumeReclaimPolicy: Recycle
-  storageClassName: slow
-  local:
-    path: /c/Users/guddi/OneDrive/Desktop/mongopvc
-  nodeAffinity:
-    required:
-      nodeSelectorTerms:
-      - matchExpressions:
-        - key: kubernetes.io/hostname
-          operator: In
-          values:
-          - docker-desktop
+# apiVersion: v1
+# kind: PersistentVolume
+# metadata:
+#   name: mypv
+#   namespace: sts-app
+# spec:
+#   capacity:
+#     storage: 1Gi
+#   volumeMode: Filesystem
+#   accessModes:
+#     - ReadWriteOnce
+#   persistentVolumeReclaimPolicy: Recycle
+#   storageClassName: slow
+#   local:
+#     path: /c/Users/guddi/OneDrive/Desktop/mongopvc
+#   nodeAffinity:
+#     required:
+#       nodeSelectorTerms:
+#       - matchExpressions:
+#         - key: kubernetes.io/hostname
+#           operator: In
+#           values:
+#           - docker-desktop
 
----
+# ---
 
-apiVersion: v1
-kind: PersistentVolumeClaim
-metadata:
-  name: mypvclaim
-  namespace: default
-spec:
-  storageClassName: slow
-  accessModes:
-  - ReadWriteOnce
-  resources:
-    requests:
-      storage: 1Gi
+# apiVersion: v1
+# kind: PersistentVolumeClaim
+# metadata:
+#   name: mypvclaim
+#   namespace: sts-app
+# spec:
+#   storageClassName: slow
+#   accessModes:
+#   - ReadWriteOnce
+#   resources:
+#     requests:
+#       storage: 1Gi
